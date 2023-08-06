@@ -26,8 +26,8 @@ const Categories = () => {
                         className={`${
                             category === filter
                                 ? "bg-light-white-300 font-medium"
-                                : "font-normal"
-                        } px-4 py-3 rounded-lg capitalize whitespace-nowrap`}
+                                : "font-normal hover:bg-light-white-300"
+                        } px-4 py-3 rounded-3xl capitalize whitespace-nowrap transition duration-500 ease-in-out`}
                     >
                         {filter}
                     </button>
