@@ -97,7 +97,7 @@ const ProjectForm = ({ type, session, project }: Props) => {
                     id="image"
                     type="file"
                     accept='image/*'
-                    required={type === "create" ? true : false}
+                    required={type === "create"}
                     className="form_image-input"
                     onChange={(e) => handleChangeImage(e)}
                 />
@@ -113,7 +113,7 @@ const ProjectForm = ({ type, session, project }: Props) => {
             <FormField
                 title="Title"
                 state={form.title}
-                placeholder="Flexibble"
+                placeholder="Pickable"
                 setState={(value) => handleStateChange('title', value)}
             />
 
@@ -129,7 +129,7 @@ const ProjectForm = ({ type, session, project }: Props) => {
                 type="url"
                 title="Website URL"
                 state={form.liveSiteUrl}
-                placeholder="https://jsmastery.pro"
+                placeholder="https://google.com"
                 setState={(value) => handleStateChange('liveSiteUrl', value)}
             />
 
@@ -137,7 +137,7 @@ const ProjectForm = ({ type, session, project }: Props) => {
                 type="url"
                 title="GitHub URL"
                 state={form.githubUrl}
-                placeholder="https://github.com/adrianhajdin"
+                placeholder="https://github.com/example"
                 setState={(value) => handleStateChange('githubUrl', value)}
             />
 
@@ -153,7 +153,7 @@ const ProjectForm = ({ type, session, project }: Props) => {
                     title={submitting ? `${type === "create" ? "Creating" : "Editing"}` : `${type === "create" ? "Create" : "Edit"}`}
                     type="submit"
                     leftIcon={submitting ? "" : "/plus.svg"}
-                    isSubmitting={submitting}
+                    submitting={submitting}
                 />
             </div>
         </form>
